@@ -1,0 +1,496 @@
+<header>
+    <div class="center-content">
+        <h1>Nadi Jyotish Astro</h1>
+        <p>Your Guide to Spiritual & Astrological Insight</p>
+    </div>
+    <ul class="nav-menu">
+    <li>Home</li>
+    <li>Contact</li>
+    <li>About</li>
+    <li class="dropdown">
+        Services
+        <ul class="dropdown-menu">
+            <li><a href="#">Nadi Astrology Reading</a></li>
+            <li><a href="#">Spiritual Remedies</a></li>
+            <li><a href="#">Poojas & Homams</a></li>
+            <li><a href="#">Marriage Matching</a></li>
+        </ul>
+    </li>
+</ul>
+</header> 
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+header h1, header p {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+header ul li {
+    cursor: pointer;
+}
+
+.first {
+    background-color: #3498db;
+    color: white;
+    height: 300px ;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+  
+.first {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+  width: 250px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Floating Buttons Container */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Common Button Styles */
+.floating-buttons a {
+  width: 50px;
+  height: 50px;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 22px;
+  transition: transform 0.2s ease;
+}
+
+.floating-buttons a.call-button {
+  background-color: #f44336; /* Red for call */
+}
+
+.floating-buttons a:hover {
+  transform: scale(1.1);
+}
+
+  header {
+            
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+ }
+ footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+ }
+
+ /* Dropdown Styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #2c3e50;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav-menu > li {
+  position: relative;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+/* Dropdown Menu (Initially Hidden) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 999;
+}
+
+/* Dropdown Items */
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Navbar Basics */
+.navbar {
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  background-color: #2c3e50;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu > li {
+  position: relative;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile Menu Toggle Icon */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    background-color: #2c3e50;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: #34495e;
+  }
+
+  .dropdown-menu li a {
+    color: white;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #2c3e50;
+  }
+}
+  
+
+
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+
+
+
+main html
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="bb.css">
+
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<body>
+
+<div>
+<header class="main-header">
+  <div class="logo">
+  <img src="agstya-nadi-jyotish-online.png" alt="Logo" class="logo-img" />
+  
+  <div class="logo-text">
+  <h1>
+    <a href="main.html" class="home-link">Nadi Jyotish Astro</a>
+  </h1>
+  <p>Your Guide to Spiritual & Astrological Insight</p>
+</div>
+
+</div>
+
+
+  <nav class="navbar">
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+   
+      <ul class="nav-menu">
+  <li><a href="main.html" class="active">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  
+  <li class="dropdown">
+  <span class="dropdown-toggle">Services</span>
+  <ul class="dropdown-menu">
+    <li><a href="nadi-reading.html">Nadi Prediction</a></li>
+    <li><a href="spiritual-remedies.html">Horoscope</a></li>
+    <li><a href="poojas-homams.html">Vastu</a></li>
+    <li><a href="marriage-matching.html">Marriage Matching</a></li>
+  </ul>
+</li>
+
+  <li><a href="about.html">About</a></li>
+</ul>
+
+  </nav>
+</header>
+
+<div class="rows">
+<div class="first-row">
+  <img src="main one.jfif" alt="Main One" class="main-img" height="400px" />
+
+  <div class="image-button-wrapper">
+    <button class="image-btn">Click Me</button>
+  </div>
+</div>
+
+  <!-- Second Row: The Card Links -->
+  <div class="second-row">
+    <a href="https://wa.me/8526694808?text=I%20am%20interested%20in%20Shiva%20Nadi%20Jyotish" class="card-link">
+      <img src="bohar-nadi-jyotis.png" alt="Shiva Nadi Jyotish" class="card-img" />
+      <p>Shiva Nadi Jyotish</p>
+    </a>
+
+    <a href="https://wa.me/8526694808?text=Tell%20me%20about%20Bohar%20Nadi%20Jyotish" class="card-link">
+      <img src="siva-nadi-jyotish.png" alt="Agastya Nadi Jyotish" class="card-img" />
+      <p>Agastya Nadi Jyotish</p>
+    </a>
+
+    <a href="https://wa.me/8526694808?text=Tell%20me%20about%20Bohar%20Nadi%20Jyotish" class="card-link">
+      <img src="shri-agastya-nadi-jyotish.png" alt="Bohar Nadi Jyotish" class="card-img" />
+      <p>Bohar Nadi Jyotish</p>
+    </a>
+
+    <a href="https://wa.me/8526694808?text=I%20want%20details%20on%20Sukha%20Nadi%20Jyotish" class="card-link">
+      <img src="sage-sukha.png" alt="Sukha Nadi Jyotish" class="card-img" />
+      <p>Sukha Nadi Jyotish</p>
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+   <!-- Floating Contact Buttons -->
+<div class="floating-buttons">
+  <a href="https://wa.me/8526694808" target="_blank" class="whatsapp-button" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+8526694808" class="call-button" title="Call Us">
+    <i class="fas fa-phone"></i>
+  </a>
+  <a href="https://www.instagram.com/nadijyotish.online/?igsh=aGtzbXc4M3Bhb2N6#" target="_blank" class="insta-button" title="Follow us on Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/people/Nadi-astrology/61577963691760/?rdid=T8kKHZ2m5IqMHj5l&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JFB3kp1je%2F" target="_blank" class="fb-button" title="Follow us on Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  </div>
+
+
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+   
+    
+    <div class="social-icons">
+      <a href="https://www.facebook.com/people/Nadi-astrology/61577963691760/?rdid=IkIQ5LncwI1dZz6T&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1JFB3kp1je%2F" target="_blank" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/agasthiya_nadi?t=Zz38OdZt7iXYSsjvf_kcpA&s=09" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      
+    </div>
+    <p>Contact: +91 8526694808</p>
+    <p>&copy; 2025 Sri Nadi Jyotish Astro Gurukulam</p>
+  </div>
+</footer>
+
+
+
+</div>
+
+<script>
+  // Toggle mobile menu
+  const menuToggle = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Toggle dropdown on click (mobile)
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent closing when clicking inside
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Optional: Close dropdown if clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+</script>
+
+<style>
+/* Ensure dropdown shows on mobile when clicked */
+.dropdown-menu.show {
+  display: block !important;
+}
+</style>
+
+
+</body>
+</html>

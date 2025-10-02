@@ -1,0 +1,753 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 60px;      /* adjust size as needed */
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+
+/* HEADER FLEX LAYOUT */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(172, 2, 2);
+  padding: 20px;
+  color: white;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo h1 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.logo p {
+  font-size: 14px;
+}
+.home-link {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* NAVIGATION MENU */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  position: relative;
+  font-weight: bold;
+}
+
+.nav-menu li a,
+.nav-menu li span {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+}
+.dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: rgb(172, 2, 2);
+  }
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgb(172, 2, 2);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(172, 2, 2);
+  color: white;
+}
+
+/* Navigation Styles */
+.navbar {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(172, 2, 2);
+  gap: 30px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu > li {
+  position: relative;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    background-color: #2c3e50;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid #3b4a59;
+  }
+
+  
+  .dropdown-menu li a {
+    color: white;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #2c3e50;
+  }
+}
+
+/* JS-triggered dropdown visibility */
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* Parent container that holds the row */
+.rows {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+    /* Full viewport height for vertical center effect */
+  flex-direction: column;  /* If you have multiple rows (optional) */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-around;  /* Center content horizontally */
+  align-items: center;      /* Center content vertically */
+  gap: 30px;                /* Space between image and button */
+  flex-wrap: wrap;          /* Stack on smaller screens */
+  margin: 40px 0;
+}
+
+.first-row{
+  
+  background-color: white;  /* Blue background */
+  padding: 40px 20px;         /* Spacing above and below image */
+ 
+  width: 70%;
+  border-radius: 30px;
+  
+}
+
+/* Image styling */
+.first-row .main-img {
+
+ 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper for button to allow styling */
+.image-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styling */
+.image-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #4a2c84;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-btn:hover {
+  background-color: #6b42aa;
+}
+
+/* Container for message + button */
+.button-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Message styling */
+.button-message {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+/* Second row: card links */
+.second-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  justify-content: center;   /* vertical alignment */
+  align-items: center;       /* horizontal alignment */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 200px;         /* adjust as needed */
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 50px;  /* space for text below image */
+}
+
+
+.card-img {
+  width: 140px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card-link p {
+  color: #000;  /* or any color that contrasts with white background */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.second-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+ background-color: green;
+height: 500px;
+width: 100%;
+
+}
+
+.second-image {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* spacing between image and text */
+  margin-top: 20px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.second-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.second-image p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+
+
+
+
+
+/* Floating Contact Buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.floating-buttons a {
+  width: 50px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 22px;
+  transition: transform 0.2s ease;
+}
+
+.floating-buttons a.call-button {
+  background-color: #f44336;
+} 
+.floating-buttons .insta-button {
+  background-color: #E1306C;
+}
+
+.floating-buttons .fb-button {
+  background-color: #3b5998;
+}
+
+.floating-buttons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.floating-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  background-color: rgb(172, 2, 2);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #1abc9c; /* highlight color on hover */
+}
+.footer-content p {
+  margin: 8px 0;  /* Adds vertical spacing */
+}
+
+.footer-contact {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.image-row {
+  background-color: rgba(2, 19, 26);  /* Blue background */
+  padding: 40px 20px;         /* Spacing above and below image */
+  text-align: center;         /* Center content horizontally */
+}
+
+.centered-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+
+.custom-list {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.custom-list ul {
+  display: inline-block; /* So it centers as a block */
+  text-align: left;      /* Keep list items aligned left */
+  padding-left: 0;
+  list-style: none;      /* Remove default bullets */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+/* Custom bullet image */
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background-image: url('om.jfif'); /* Replace with your actual image */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.nadi-heading {
+  font-size: 50px;
+  text-align: center; /* Optional: center the heading */
+  margin-top: 30px;   /* Optional spacing */
+  color: black;
+}
+.custom-list li {
+  color: black;
+}
+/* Center paragraph */
+.nadi-description {
+
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+}
+.nadi-text {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+}
+
+
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  
+  /* Background Image */
+  background-color:#e0ab0d;/* 🔁 Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  
+  background-position: center ;
+
+  color: #fff; /* Optional: makes text white if your background is dark */
+}
+
+/* contact html */
+.container.content-section {
+  color: black;
+}
+.nadi {
+  display: block;
+  margin: auto; /* centers the image */
+  border-radius: 15px; /* smooth rounded corners */
+  max-width: 90%; /* responsive on smaller screens */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional: subtle shadow */
+}
+
+
+.contact.section {
+  color: black;
+}
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-card {
+ background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   gap: 40px; /* Increased space between cards */
+    font-size: 1.15rem; /* Increased font size */
+  line-height: 1.8;   /* More line spacing */
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.contact-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+
+.contact-card i {
+  margin-right: 8px;
+}
+.contact-image {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* horoscope */
+
+.horoscope-steps {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.horoscope-steps h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.horoscope-steps .step {
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.horoscope-steps ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.horoscope-steps ul li::before {
+  content: "•";
+  color: #666;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.title
+{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* vastu */
+
+.vastu-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.vastu-content h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.vastu-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.vastu-content li {
+  margin-bottom: 10px;
+}
+.vastu-image{
+  border-radius: 15px;
+}
+
+/* Mariage matching */
+
+.marriage-matching-content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.marriage-matching-content h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.marriage-matching-content h3 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.marriage-matching-content ol {
+  padding-left: 20px;
+}
+
+.marriage-matching-content li {
+  margin-bottom: 15px;
+}
